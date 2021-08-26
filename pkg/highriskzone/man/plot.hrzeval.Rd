@@ -4,10 +4,22 @@
 \alias{plot.hrzeval}
 \title{Visualize the evaluation of a high-risk zone.}
 \usage{
-\method{plot}{hrzeval}(x, ..., hrz = NULL, obspp = NULL, plothrz = FALSE,
-  plotobs = FALSE, windowcol = "white", insidecol = "blue",
-  outsidecol = "red", insidepch = 20, outsidepch = 19, zonecol = "grey",
-  obscol = "black", obspch = 1)
+\method{plot}{hrzeval}(
+  x,
+  ...,
+  hrz = NULL,
+  obspp = NULL,
+  plothrz = FALSE,
+  plotobs = FALSE,
+  windowcol = "white",
+  insidecol = "blue",
+  outsidecol = "red",
+  insidepch = 20,
+  outsidepch = 19,
+  zonecol = "grey",
+  obscol = "black",
+  obspch = 1
+)
 }
 \arguments{
 \item{x}{evaluation of a high-risk zone (object of class "\code{hrzeval}")}

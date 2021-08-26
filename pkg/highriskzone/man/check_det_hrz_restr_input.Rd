@@ -4,8 +4,21 @@
 \alias{check_det_hrz_restr_input}
 \title{Checks the arguments of det_hrz_restr}
 \usage{
-check_det_hrz_restr_input(ppdata, type, criterion, cutoff, hole, integratehole,
-  obsprobs, obsprobimage, distancemap, intens, nxprob, covmatrix, returnintens)
+check_det_hrz_restr_input(
+  ppdata,
+  type,
+  criterion,
+  cutoff,
+  hole,
+  integratehole,
+  obsprobs,
+  obsprobimage,
+  distancemap,
+  intens,
+  nxprob,
+  covmatrix,
+  returnintens
+)
 }
 \arguments{
 \item{ppdata}{Observed spatial point process of class ppp.}
@@ -38,10 +51,10 @@ Only used if \code{obsprobs} is not given.}
 
 \item{distancemap}{(optional) distance map: distance of every pixel to the nearest observation
 of the point pattern; only needed for \code{type="dist"}. If not given,
-it will be computed by \code{\link[spatstat]{distmap}}.}
+it will be computed by \code{\link[spatstat.geom]{distmap}}.}
 
 \item{intens}{(optional) estimated intensity of the observed process (object of class "im",
-see \code{\link[spatstat]{density.ppp}}), only needed for type="intens". If not given,
+see \code{\link[spatstat.core]{density.ppp}}), only needed for type="intens". If not given,
 it will be estimated.}
 
 \item{nxprob}{Probability of having unobserved events.

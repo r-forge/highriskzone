@@ -4,9 +4,21 @@
 \alias{eval_method}
 \title{Evaluation of the procedures determining the high-risk zone.}
 \usage{
-eval_method(ppdata, type, criterion, cutoff, numit = 100, nxprob = 0.1,
-  distancemap = NULL, intens = NULL, covmatrix = NULL, simulate,
-  radiusClust = NULL, clustering = 5, pbar = TRUE)
+eval_method(
+  ppdata,
+  type,
+  criterion,
+  cutoff,
+  numit = 100,
+  nxprob = 0.1,
+  distancemap = NULL,
+  intens = NULL,
+  covmatrix = NULL,
+  simulate,
+  radiusClust = NULL,
+  clustering = 5,
+  pbar = TRUE
+)
 }
 \arguments{
 \item{ppdata}{Observed spatial point process of class ppp.}
@@ -33,11 +45,11 @@ Default value is 0.1.}
 
 \item{distancemap}{(optional) distance map: distance of every pixel to the nearest observation 
 of the point pattern; only needed for \code{type="dist"}. If not given, 
-it will be computed by \code{\link[spatstat]{distmap}}.}
+it will be computed by \code{\link[spatstat.geom]{distmap}}.}
 
 \item{intens}{(optional) estimated intensity of the observed process (object of class "im"), 
 only needed for type="intens". If not given,
-it will be estimated using \code{\link[spatstat]{density.ppp}}.}
+it will be estimated using \code{\link[spatstat.core]{density.ppp}}.}
 
 \item{covmatrix}{(optional) Covariance matrix of the kernel of a normal distribution, only needed for 
 \code{type="intens"} if no intensity is given. If not given, it will be estimated
@@ -95,7 +107,7 @@ The three simulation types are:
        Here, an inhomogeneous Poisson process is simulated and then that data is thinned.
        }
 \item{ Simulation of a Neyman-Scott process }{
-       Here a Neyman-Scott process is simulated (see \code{\link{sim_nsppp}}, \code{\link[spatstat]{rNeymanScott}})
+       Here a Neyman-Scott process is simulated (see \code{\link{sim_nsppp}}, \code{\link[spatstat.core]{rNeymanScott}})
        and this data is then also thinned.
        }
 }
@@ -137,5 +149,5 @@ high-risk zone.\cr
 }
 }
 \seealso{
-\code{\link{det_hrz}}, \code{\link[spatstat]{rNeymanScott}}, \code{\link{thin}}, \code{\link{sim_nsppp}}, \code{\link{sim_intens}}
+\code{\link{det_hrz}}, \code{\link[spatstat.core]{rNeymanScott}}, \code{\link{thin}}, \code{\link{sim_nsppp}}, \code{\link{sim_intens}}
 }

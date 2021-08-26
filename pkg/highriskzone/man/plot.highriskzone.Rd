@@ -4,9 +4,17 @@
 \alias{plot.highriskzone}
 \title{Plot a high-risk zone}
 \usage{
-\method{plot}{highriskzone}(x, ..., pattern = NULL, win = NULL,
-  plotpattern = FALSE, plotwindow = FALSE, windowcol = "white",
-  usegpclib = FALSE, zonecol = "grey")
+\method{plot}{highriskzone}(
+  x,
+  ...,
+  pattern = NULL,
+  win = NULL,
+  plotpattern = FALSE,
+  plotwindow = FALSE,
+  windowcol = "white",
+  usegpclib = FALSE,
+  zonecol = "grey"
+)
 }
 \arguments{
 \item{x}{high-risk zone (object of class "\code{highriskzone}")}
@@ -25,7 +33,7 @@
 
 \item{usegpclib}{logical flag; if \code{TRUE}, the observation window is transformed in a 
 polygonal window (object of class "\code{owin}" and of type "\code{polygonal}").
-See \code{\link[spatstat]{as.polygonal}}}
+See \code{\link[spatstat.geom]{as.polygonal}}}
 
 \item{zonecol}{the colour used to plot the high-risk zone.}
 }

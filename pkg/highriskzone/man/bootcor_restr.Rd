@@ -4,10 +4,21 @@
 \alias{bootcor_restr}
 \title{Bootstrap correction to obtain desired failure probability}
 \usage{
-bootcor_restr(ppdata, cutoff, numit = 100, tol = 0.001, nxprob = 0.1,
-  hole = NULL, obsprobimage = NULL, intens = NULL, covmatrix = NULL,
-  simulate = "intens", radiusClust = NULL, clustering = 5,
-  verbose = TRUE)
+bootcor_restr(
+  ppdata,
+  cutoff,
+  numit = 100,
+  tol = 0.001,
+  nxprob = 0.1,
+  hole = NULL,
+  obsprobimage = NULL,
+  intens = NULL,
+  covmatrix = NULL,
+  simulate = "intens",
+  radiusClust = NULL,
+  clustering = 5,
+  verbose = TRUE
+)
 }
 \arguments{
 \item{ppdata}{Observed spatial point process of class ppp.}
@@ -31,7 +42,7 @@ observation window. Ranges of the coordinates must equal those of \code{ppdata}.
 Only used if \code{obsprobs} is not given.}
 
 \item{intens}{(optional) estimated intensity of the observed process (object of class "im",
-see \code{\link[spatstat]{density.ppp}}). If not given,
+see \code{\link[spatstat.core]{density.ppp}}). If not given,
 it will be estimated.}
 
 \item{covmatrix}{(optional) Covariance matrix of the kernel of a normal distribution, only meaningful
@@ -86,16 +97,16 @@ can be used instead.
 data(craterA)
 set.seed(4321)
 # define restriction area
-restrwin <- spatstat::owin(xrange = craterA$window$xrange, 
+restrwin <- spatstat.geom::owin(xrange = craterA$window$xrange, 
                           yrange = craterA$window$yrange,
                           poly = list(x = c(1500, 1500, 2000, 2000), 
                                       y = c(2000, 1500, 1500, 2000)))
 
 # create image of observation probability (30\% inside restriction area)
-wim <- spatstat::as.im(craterA$window, value = 1)
-rim <- spatstat::as.im(restrwin, xy = list(x = wim$xcol, y = wim$yrow))
+wim <- spatstat.geom::as.im(craterA$window, value = 1)
+rim <- spatstat.geom::as.im(restrwin, xy = list(x = wim$xcol, y = wim$yrow))
 rim$v[is.na(rim$v)] <- 0
-oim1 <- spatstat::eval.im(wim - 0.7 * rim)
+oim1 <- spatstat.geom::eval.im(wim - 0.7 * rim)
 
 \dontrun{
 # perform bootstrap correction

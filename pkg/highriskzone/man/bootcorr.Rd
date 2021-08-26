@@ -4,9 +4,19 @@
 \alias{bootcorr}
 \title{Bootstrap correction to obtain desired failure probability}
 \usage{
-bootcorr(ppdata, cutoff, numit = 1000, tol = 0.02, nxprob = 0.1,
-  intens = NULL, covmatrix = NULL, simulate = "intens",
-  radiusClust = NULL, clustering = 5, verbose = TRUE)
+bootcorr(
+  ppdata,
+  cutoff,
+  numit = 1000,
+  tol = 0.02,
+  nxprob = 0.1,
+  intens = NULL,
+  covmatrix = NULL,
+  simulate = "intens",
+  radiusClust = NULL,
+  clustering = 5,
+  verbose = TRUE
+)
 }
 \arguments{
 \item{ppdata}{Observed spatial point process of class ppp.}
@@ -23,7 +33,7 @@ high-risk zones not covering all events. Default value is 0.02.}
 Default value is 0.1.}
 
 \item{intens}{(optional) estimated intensity of the observed process (object of class "im",
-see \code{\link[spatstat]{density.ppp}}). If not given,
+see \code{\link[spatstat.core]{density.ppp}}). If not given,
 it will be estimated.}
 
 \item{covmatrix}{(optional) Covariance matrix of the kernel of a normal distribution, only meaningful

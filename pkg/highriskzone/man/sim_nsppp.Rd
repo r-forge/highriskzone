@@ -26,7 +26,7 @@ unobserved events}
 \value{
 The simulated point pattern (an object of class "ppp").
        Additionally, some intermediate results of the simulation are returned as 
-       attributes of this point pattern: see \code{\link[spatstat.core]{rNeymanScott}}.
+       attributes of this point pattern: see \code{\link[spatstat.random]{rNeymanScott}}.
 }
 \description{
 This algorithm generates a realisation of a Neyman-Scott process whose
@@ -34,7 +34,7 @@ expected number of points equals the number of observations in a given
 pattern.
 }
 \details{
-First, the algorithm generates a Poisson point process (see \code{\link[spatstat.core]{rpoispp}} for
+First, the algorithm generates a Poisson point process (see \code{\link[spatstat.random]{rpoispp}} for
 details) of parent points with intensity kappa, which is a pixel image
 object of class "im" (see \code{\link[spatstat.geom]{im.object}}).\cr
 This pixel image is derived from the observed pattern using \code{\link[spatstat.core]{density.ppp}}.
@@ -44,7 +44,7 @@ this can be taken into account using the parameter \code{thinning}.
 Usually, not the estimated intensity itself is used for simulating the
 parent process, but its values are divided by a constant named "clustering".\cr
 Second, each parent point is replaced by a random cluster of points, created
-by calling the function \code{\link[spatstat.core]{runifdisc}}. Each cluster consists of a Poisson
+by calling the function \code{\link[spatstat.random]{runifdisc}}. Each cluster consists of a Poisson
 distributed number of points (with \code{clustering} being the expected number of
 points in each cluster) which are located in a disc of a given \code{radius}.
 These clusters are combined to yield a single point pattern which is
@@ -69,6 +69,6 @@ inhomogeneous Poisson point process.
  }
 }
 \seealso{
-\code{\link[spatstat.core]{rNeymanScott}}, \code{\link[spatstat.core]{rThomas}}, 
-         \code{\link[spatstat.core]{rMatClust}}
+\code{\link[spatstat.random]{rNeymanScott}}, \code{\link[spatstat.random]{rThomas}}, 
+         \code{\link[spatstat.random]{rMatClust}}
 }

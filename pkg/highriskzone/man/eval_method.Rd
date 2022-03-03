@@ -107,7 +107,7 @@ The three simulation types are:
        Here, an inhomogeneous Poisson process is simulated and then that data is thinned.
        }
 \item{ Simulation of a Neyman-Scott process }{
-       Here a Neyman-Scott process is simulated (see \code{\link{sim_nsppp}}, \code{\link[spatstat.core]{rNeymanScott}})
+       Here a Neyman-Scott process is simulated (see \code{\link{sim_nsppp}}, \code{\link[spatstat.random]{rNeymanScott}})
        and this data is then also thinned.
        }
 }
@@ -149,5 +149,5 @@ high-risk zone.\cr
 }
 }
 \seealso{
-\code{\link{det_hrz}}, \code{\link[spatstat.core]{rNeymanScott}}, \code{\link{thin}}, \code{\link{sim_nsppp}}, \code{\link{sim_intens}}
+\code{\link{det_hrz}}, \code{\link[spatstat.random]{rNeymanScott}}, \code{\link{thin}}, \code{\link{sim_nsppp}}, \code{\link{sim_intens}}
 }

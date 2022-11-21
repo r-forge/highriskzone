@@ -53,7 +53,7 @@
 #'                     of the point pattern; only needed for \code{type="dist"}. If not given,
 #'                     it will be computed by \code{\link[spatstat.geom]{distmap}}.
 #' @param intens  (optional) estimated intensity of the observed process (object of class "im",
-#'                see \code{\link[spatstat.core]{density.ppp}}), only needed for type="intens". If not given,
+#'                see \code{\link[spatstat.explore]{density.ppp}}), only needed for type="intens". If not given,
 #'                it will be estimated.
 #' @param nxprob  Probability of having unobserved events.
 #'                Default value is 0.1.
@@ -73,7 +73,7 @@
 #' quantile of the nearest-neighbour distance. For type="intens" and criterion="area" or "direct", it is the failure
 #' probability alpha. For all other criterions it is NA.}
 #'    \item{ covmatrix }{ If not given (and \code{type="intens"}), it is estimated. See \code{\link[ks]{Hscv}}.}
-#'    \item{ estint }{ Estimated intensity. See \code{\link[spatstat.core]{density.ppp}}.}
+#'    \item{ estint }{ Estimated intensity. See \code{\link[spatstat.explore]{density.ppp}}.}
 #' @seealso \code{\link[spatstat.geom]{distmap}}, \code{\link[spatstat.geom]{eval.im}}, \code{\link[spatstat.geom]{owin}}
 #' @examples
 #' set.seed(1211515)

@@ -54,7 +54,7 @@ of the point pattern; only needed for \code{type="dist"}. If not given,
 it will be computed by \code{\link[spatstat.geom]{distmap}}.}
 
 \item{intens}{(optional) estimated intensity of the observed process (object of class "im",
-see \code{\link[spatstat.core]{density.ppp}}), only needed for type="intens". If not given,
+see \code{\link[spatstat.explore]{density.ppp}}), only needed for type="intens". If not given,
 it will be estimated.}
 
 \item{nxprob}{Probability of having unobserved events.

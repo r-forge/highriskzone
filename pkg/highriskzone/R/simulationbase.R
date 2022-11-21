@@ -40,7 +40,7 @@ thin <- function(full, nxprob){
 #' @param intensSim  Intensity to use for the simulation
 #' @param nxprob  Probability of having unobserved events
 #' @return A list of of observed and unobserved point patterns (see \code{\link{thin}})
-#' @import spatstat.core
+#' @import spatstat.explore
 #' @import spatstat.geom
 #' @import spatstat.random
 #' @seealso \code{\link{thin}}, \code{\link[spatstat.random]{rpoispp}}
@@ -101,8 +101,8 @@ sim_intens <- function(ppdata, intensSim, nxprob) {
 #'          parent process
 #' @param radius  radius of the circles around the parent points in which the cluster
 #'          points are located
-#' @return A pixel image (object of class "im"). See \code{\link[spatstat.core]{density.ppp}}.  
-#' @seealso \code{\link[spatstat.core]{density.ppp}}, \code{\link[spatstat.geom]{boundingbox}}, 
+#' @return A pixel image (object of class "im"). See \code{\link[spatstat.explore]{density.ppp}}.  
+#' @seealso \code{\link[spatstat.explore]{density.ppp}}, \code{\link[spatstat.geom]{boundingbox}}, 
 #'          \code{\link[spatstat.geom]{owin}}, \code{\link[ks]{Hscv}}
 
 
@@ -177,7 +177,7 @@ sim_nsprocess <- function(ppdata, intens, radius, clustering=5, thinning=0){
 #' First, the algorithm generates a Poisson point process (see \code{\link[spatstat.random]{rpoispp}} for
 #' details) of parent points with intensity kappa, which is a pixel image
 #' object of class "im" (see \code{\link[spatstat.geom]{im.object}}).\cr
-#' This pixel image is derived from the observed pattern using \code{\link[spatstat.core]{density.ppp}}.
+#' This pixel image is derived from the observed pattern using \code{\link[spatstat.explore]{density.ppp}}.
 #' The bandwidth is not chosen in advance.\cr
 #' If only a thinned version of the original pattern has been observed,
 #' this can be taken into account using the parameter \code{thinning}.

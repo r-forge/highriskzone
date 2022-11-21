@@ -25,7 +25,7 @@ alpha) or \code{"direct"} (threshold, i.e. maximum intensity of unexploded bombs
 \item{cutoff}{Value of criterion (alpha or threshold)}
 
 \item{intens}{(optional) estimated intensity of the observed process (object of class "im") in (bigger) 
-observation area, if not given, it will be estimated using \code{\link[spatstat.core]{density.ppp}}.}
+observation area, if not given, it will be estimated using \code{\link[spatstat.explore]{density.ppp}}.}
 
 \item{nxprob}{Probability of having unobserved events.
 Default value is 0.1.}

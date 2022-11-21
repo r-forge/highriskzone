@@ -64,7 +64,7 @@
 #'                     it will be computed by \code{\link[spatstat.geom]{distmap}}.
 #' @param intens  (optional) estimated intensity of the observed process (object of class "im"), 
 #'                only needed for type="intens". If not given,
-#'                it will be estimated using \code{\link[spatstat.core]{density.ppp}}.
+#'                it will be estimated using \code{\link[spatstat.explore]{density.ppp}}.
 #' @param nxprob  Probability of having unobserved events.
 #'                Default value is 0.1.
 #' @param covmatrix  (optional) Covariance matrix of the kernel of a normal distribution, only needed for 

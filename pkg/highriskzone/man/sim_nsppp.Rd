@@ -37,7 +37,7 @@ pattern.
 First, the algorithm generates a Poisson point process (see \code{\link[spatstat.random]{rpoispp}} for
 details) of parent points with intensity kappa, which is a pixel image
 object of class "im" (see \code{\link[spatstat.geom]{im.object}}).\cr
-This pixel image is derived from the observed pattern using \code{\link[spatstat.core]{density.ppp}}.
+This pixel image is derived from the observed pattern using \code{\link[spatstat.explore]{density.ppp}}.
 The bandwidth is not chosen in advance.\cr
 If only a thinned version of the original pattern has been observed,
 this can be taken into account using the parameter \code{thinning}.

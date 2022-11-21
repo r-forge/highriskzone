@@ -17,12 +17,12 @@ points are located}
 \item{weights}{Vector of observation probabilities associated with the observations contained in \code{ppdata}.}
 }
 \value{
-A pixel image (object of class "im"). See \code{\link[spatstat.core]{density.ppp}}.
+A pixel image (object of class "im"). See \code{\link[spatstat.explore]{density.ppp}}.
 }
 \description{
 Used in function bootcor_restr.
 }
 \seealso{
-\code{\link[spatstat.core]{density.ppp}}, \code{\link[spatstat.geom]{boundingbox}},
+\code{\link[spatstat.explore]{density.ppp}}, \code{\link[spatstat.geom]{boundingbox}},
          \code{\link[spatstat.geom]{owin}}, \code{\link[ks]{Hscv}}
 }

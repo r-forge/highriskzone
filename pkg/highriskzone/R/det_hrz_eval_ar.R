@@ -14,7 +14,7 @@
 #' alpha) or \code{"direct"} (threshold, i.e. maximum intensity of unexploded bombs outside hrz) 
 #' @param cutoff  Value of criterion (alpha or threshold)
 #' @param intens  (optional) estimated intensity of the observed process (object of class "im") in (bigger) 
-#' observation area, if not given, it will be estimated using \code{\link[spatstat.core]{density.ppp}}.
+#' observation area, if not given, it will be estimated using \code{\link[spatstat.explore]{density.ppp}}.
 #' @param nxprob  Probability of having unobserved events.
 #'                Default value is 0.1.
 #' @param covmatrix  (optional) Covariance matrix of the kernel of a normal distribution, only needed for 

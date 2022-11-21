@@ -89,7 +89,7 @@ det_radius <- function(ppdata, distancemap, areahrz, win){
 #' A Poisson distribution is used for the number of unobserved events in a certain area or field.
 #' Used in functions det_threshold, det_thresholdfromarea.
 #'
-#' @param intens  estimated intensity of the observed process (object of class "im", see \code{\link[spatstat.core]{density.ppp}})
+#' @param intens  estimated intensity of the observed process (object of class "im", see \code{\link[spatstat.explore]{density.ppp}})
 #' @param threshold  threshold c: The high-risk zone is the field in which the estimated intensity 
 #'                   exceeds this value.
 #' @param nxprob  probability of having unobserved events   
@@ -129,7 +129,7 @@ det_alpha <- function(intens, threshold, nxprob=0.1) {
 #' alpha.
 #' This function is for the intensity-based method. Used in function det_hrz.
 #'
-#' @param intens  estimated intensity of the observed process (object of class "im", see \code{\link[spatstat.core]{density.ppp}})
+#' @param intens  estimated intensity of the observed process (object of class "im", see \code{\link[spatstat.explore]{density.ppp}})
 #' @param alpha   failure probability: probability to have at least one unobserved event
 #'                outside the high-risk zone
 #' @param nxprob  probability of having unobserved events
@@ -220,7 +220,7 @@ det_area_hole <- function(win, intensmatrix, threshold, hole, integratehole = TR
 #'
 #' This function is used for the intensity-based method. Used in function det_hrz.
 #'
-#' @param intens  estimated intensity of the observed process (object of class "im", see \code{\link[spatstat.core]{density.ppp}}) 
+#' @param intens  estimated intensity of the observed process (object of class "im", see \code{\link[spatstat.explore]{density.ppp}}) 
 #' @param areahrz  area of the high-risk zone 
 #' @param win  observation window
 #' @param nxprob  probability of having unbserved events  
@@ -270,7 +270,7 @@ det_thresholdfromarea <- function(intens, areahrz, win, nxprob=0.1){
 #'
 #' This function is used for the intensity-based method. Used in function det_hrz_restr.
 #'
-#' @param intens  estimated intensity of the observed process (object of class "im", see \code{\link[spatstat.core]{density.ppp}}) 
+#' @param intens  estimated intensity of the observed process (object of class "im", see \code{\link[spatstat.explore]{density.ppp}}) 
 #' @param areahrz area of the high-risk zone 
 #' @param win     observation window
 #' @param nxprob  probability of having unbserved events  

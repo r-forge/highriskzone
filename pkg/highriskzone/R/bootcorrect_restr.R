@@ -41,7 +41,7 @@
 #'                        observation window. Ranges of the coordinates must equal those of \code{ppdata}.
 #'                        Only used if \code{obsprobs} is not given.
 #' @param intens (optional) estimated intensity of the observed process (object of class "im",
-#'                see \code{\link[spatstat.core]{density.ppp}}). If not given,
+#'                see \code{\link[spatstat.explore]{density.ppp}}). If not given,
 #'                it will be estimated.
 #' @param covmatrix  (optional) Covariance matrix of the kernel of a normal distribution, only meaningful
 #'                    if no intensity is given. If not given, it will be estimated.

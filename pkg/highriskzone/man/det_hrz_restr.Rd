@@ -54,7 +54,7 @@ of the point pattern; only needed for \code{type="dist"}. If not given,
 it will be computed by \code{\link[spatstat.geom]{distmap}}.}
 
 \item{intens}{(optional) estimated intensity of the observed process (object of class "im",
-see \code{\link[spatstat.core]{density.ppp}}), only needed for type="intens". If not given,
+see \code{\link[spatstat.explore]{density.ppp}}), only needed for type="intens". If not given,
 it will be estimated.}
 
 \item{nxprob}{Probability of having unobserved events.
@@ -78,7 +78,7 @@ An object of class "\code{highriskzone}", which is a list of
 quantile of the nearest-neighbour distance. For type="intens" and criterion="area" or "direct", it is the failure
 probability alpha. For all other criterions it is NA.}
    \item{ covmatrix }{ If not given (and \code{type="intens"}), it is estimated. See \code{\link[ks]{Hscv}}.}
-   \item{ estint }{ Estimated intensity. See \code{\link[spatstat.core]{density.ppp}}.}
+   \item{ estint }{ Estimated intensity. See \code{\link[spatstat.explore]{density.ppp}}.}
 }
 \description{
 \code{det_hrz_restr} determines the high-risk zone through the method of fixed radius

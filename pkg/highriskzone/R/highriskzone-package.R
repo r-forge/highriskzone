@@ -10,7 +10,7 @@
 #' @name highriskzone-package
 #' @docType package
 #' @aliases package-highriskzone
-#' @import spatstat fields rgeos maps
+#' @import spatstat fields maps
 #' @title Determining high-risk zones by using spatial point process methodology
 #' @keywords package
 #' @references Monia Mahling, Michael \enc{Hoehle}{Hoehle} & Helmut \enc{Kuechenhoff}{Kuechenhoff} (2013),

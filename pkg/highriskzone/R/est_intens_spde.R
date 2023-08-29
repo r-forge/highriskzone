@@ -17,6 +17,8 @@
 #' @importFrom deldir deldir
 #' @importFrom deldir tile.list
 #' @importFrom Matrix Diagonal
+#' @importFrom polyclip polyclip
+#' @importFrom splancs areapl
 #' @export
 #' @return A list of
 #'    \item{ intensest }{ Pixel image with the estimated intensities of the random field. }
@@ -76,9 +78,10 @@ See www.r-inla.org for more information!")
   spde <- INLA::inla.spde2.matern(mesh=mesh, alpha=alpha,...)
   
   if(is.null(weights)){
-    crater_region <- as(boundary, 'gpc.poly')
     tiles <- tile.list(deldir(mesh$loc[,1], mesh$loc[,2]))
-    weights <- sapply(tiles, function(p) area.poly(intersect(as(cbind(p$x, p$y), 'gpc.poly'), crater_region)))
+    crater_region <- list(list(x=boundary[,1], y=boundary[,2]))
+    intersections <- sapply(tiles, function(p) polyclip(crater_region, list(list(x=p$x, y=p$y))))
+    weights <- sapply(intersections, function(p) ifelse(length(p) == 0, 0, areapl(cbind(p[[1]]$x, p[[1]]$y))))
   }
   
   mesh_n <- mesh$n
@@ -89,7 +92,7 @@ See www.r-inla.org for more information!")
   
   
   inla_result <- INLA::inla(y ~ 0 + beta0 + f(i, model=spde), family="poisson", data=INLA::inla.stack.data(stack), 
-                      control.predictor=list(A=INLA::inla.stack.A(stack)), E=INLA::inla.stack.data(stack)$e)
+                            control.predictor=list(A=INLA::inla.stack.A(stack)), E=INLA::inla.stack.data(stack)$e)
   random_field <- INLA::inla.spde2.result(inla_result, 'i', spde) 
   projector <- INLA::inla.mesh.projector(mesh, dims=c(npixel,npixel), xlim=c(win$xrange[1],win$xrange[2]), ylim=c(win$yrange[1],win$yrange[2]))
   intensity_spde <- INLA::inla.mesh.project(projector, random_field$summary.value$mean) + mean(inla_result$marginals.fix[[1]][,1])
